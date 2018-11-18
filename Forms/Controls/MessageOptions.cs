@@ -27,6 +27,14 @@ namespace MouseNet.TinyAlarm.Forms.Controls
 
         public event EventHandler ConfigureClicked;
 
+        private void OnShowMessageCheckedChanged
+            (object sender,
+             EventArgs e)
+            {
+            _cMessageType.Enabled = _cShowMessage.Checked;
+            _cConfigureBtn.Enabled = _cShowMessage.Checked;
+            }
+
         private void OnConfigureClicked
             (object sender,
              EventArgs args)

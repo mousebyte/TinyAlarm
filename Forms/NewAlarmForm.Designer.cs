@@ -34,9 +34,10 @@ namespace MouseNet.TinyAlarm.Forms
             this._cRepeatCheckbox = new System.Windows.Forms.CheckBox();
             this._lblName = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this._cTimerConfig = new TimerConfig();
-            this._cAlarmConfig = new AlarmConfig();
+            this._cTimerConfig = new MouseNet.TinyAlarm.Forms.Controls.TimerConfig();
+            this._cAlarmConfig = new MouseNet.TinyAlarm.Forms.Controls.AlarmConfig();
             this._cType = new MouseNet.Forms.Controls.RadioButtonGroup();
+            this.alertOptions1 = new MouseNet.TinyAlarm.Forms.Controls.AlertOptions();
             this.SuspendLayout();
             // 
             // _lblType
@@ -100,7 +101,7 @@ namespace MouseNet.TinyAlarm.Forms
             // 
             this._cType.ButtonLayout = MouseNet.Forms.Controls.RadioButtonLayout.Horizontal;
             this._cType.ButtonMargin = new System.Windows.Forms.Padding(4, 3, 4, 4);
-            this._cType.CheckedItemIndex = -1;
+            this._cType.CheckedItemIndex = 0;
             this._cType.Items.AddRange(new object[] {
             "Timer",
             "Alarm"});
@@ -111,11 +112,20 @@ namespace MouseNet.TinyAlarm.Forms
             this._cType.TabIndex = 4;
             this._cType.CheckedItemChanged += new System.EventHandler(this.OnTypeChanged);
             // 
+            // alertOptions1
+            // 
+            this.alertOptions1.Location = new System.Drawing.Point(12, 66);
+            this.alertOptions1.Message = null;
+            this.alertOptions1.Name = "alertOptions1";
+            this.alertOptions1.Size = new System.Drawing.Size(417, 176);
+            this.alertOptions1.TabIndex = 9;
+            // 
             // NewAlarmForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(405, 329);
+            this.ClientSize = new System.Drawing.Size(441, 248);
+            this.Controls.Add(this.alertOptions1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this._lblName);
             this.Controls.Add(this._cTimerConfig);
@@ -143,5 +153,6 @@ namespace MouseNet.TinyAlarm.Forms
         private TimerConfig _cTimerConfig;
         private System.Windows.Forms.Label _lblName;
         private System.Windows.Forms.TextBox textBox1;
+        private AlertOptions alertOptions1;
     }
 }

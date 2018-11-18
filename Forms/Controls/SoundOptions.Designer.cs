@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this._groupSound = new System.Windows.Forms.GroupBox();
+            this._cVolume = new System.Windows.Forms.TrackBar();
+            this._cLoop = new System.Windows.Forms.CheckBox();
             this._lblVolume = new System.Windows.Forms.Label();
             this._cTestStopBtn = new System.Windows.Forms.Button();
             this._cBrowseBtn = new System.Windows.Forms.Button();
             this._cFileName = new System.Windows.Forms.TextBox();
             this._cPlaySound = new System.Windows.Forms.CheckBox();
-            this._cLoop = new System.Windows.Forms.CheckBox();
-            this._cVolume = new System.Windows.Forms.TrackBar();
             this._cOpenSoundDialog = new System.Windows.Forms.OpenFileDialog();
             this._groupSound.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._cVolume)).BeginInit();
@@ -59,6 +59,32 @@
             this._groupSound.TabIndex = 2;
             this._groupSound.TabStop = false;
             this._groupSound.Text = "Sound";
+            // 
+            // _cVolume
+            // 
+            this._cVolume.Enabled = false;
+            this._cVolume.Location = new System.Drawing.Point(57, 43);
+            this._cVolume.Maximum = 100;
+            this._cVolume.Minimum = 1;
+            this._cVolume.Name = "_cVolume";
+            this._cVolume.Size = new System.Drawing.Size(268, 45);
+            this._cVolume.TabIndex = 6;
+            this._cVolume.TickFrequency = 5;
+            this._cVolume.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this._cVolume.Value = 100;
+            this._cVolume.ValueChanged += new System.EventHandler(this.OnVolumeChanged);
+            // 
+            // _cLoop
+            // 
+            this._cLoop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._cLoop.AutoSize = true;
+            this._cLoop.Enabled = false;
+            this._cLoop.Location = new System.Drawing.Point(331, 44);
+            this._cLoop.Name = "_cLoop";
+            this._cLoop.Size = new System.Drawing.Size(50, 17);
+            this._cLoop.TabIndex = 3;
+            this._cLoop.Text = "Loop";
+            this._cLoop.UseVisualStyleBackColor = true;
             // 
             // _lblVolume
             // 
@@ -116,31 +142,6 @@
             this._cPlaySound.Text = "Play sound:";
             this._cPlaySound.UseVisualStyleBackColor = true;
             this._cPlaySound.Click += new System.EventHandler(this.OnPlaySoundCheckedChanged);
-            // 
-            // _cLoop
-            // 
-            this._cLoop.AutoSize = true;
-            this._cLoop.Enabled = false;
-            this._cLoop.Location = new System.Drawing.Point(331, 44);
-            this._cLoop.Name = "_cLoop";
-            this._cLoop.Size = new System.Drawing.Size(50, 17);
-            this._cLoop.TabIndex = 3;
-            this._cLoop.Text = "Loop";
-            this._cLoop.UseVisualStyleBackColor = true;
-            // 
-            // _cVolume
-            // 
-            this._cVolume.Enabled = false;
-            this._cVolume.Location = new System.Drawing.Point(57, 43);
-            this._cVolume.Maximum = 100;
-            this._cVolume.Minimum = 1;
-            this._cVolume.Name = "_cVolume";
-            this._cVolume.Size = new System.Drawing.Size(268, 45);
-            this._cVolume.TabIndex = 6;
-            this._cVolume.TickFrequency = 5;
-            this._cVolume.TickStyle = System.Windows.Forms.TickStyle.Both;
-            this._cVolume.Value = 100;
-            this._cVolume.ValueChanged += new System.EventHandler(this.OnVolumeChanged);
             // 
             // _cOpenSoundDialog
             // 

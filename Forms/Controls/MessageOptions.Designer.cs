@@ -37,6 +37,9 @@
             // 
             // _groupMessage
             // 
+            this._groupMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this._groupMessage.Controls.Add(this._cConfigureBtn);
             this._groupMessage.Controls.Add(this._cMessageType);
             this._groupMessage.Controls.Add(this._cShowMessage);
@@ -49,7 +52,9 @@
             // 
             // _cConfigureBtn
             // 
-            this._cConfigureBtn.Location = new System.Drawing.Point(317, 16);
+            this._cConfigureBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._cConfigureBtn.Enabled = false;
+            this._cConfigureBtn.Location = new System.Drawing.Point(320, 16);
             this._cConfigureBtn.Name = "_cConfigureBtn";
             this._cConfigureBtn.Size = new System.Drawing.Size(69, 23);
             this._cConfigureBtn.TabIndex = 4;
@@ -82,13 +87,12 @@
             this._cShowMessage.TabIndex = 0;
             this._cShowMessage.Text = "Show message:";
             this._cShowMessage.UseVisualStyleBackColor = true;
+            this._cShowMessage.CheckedChanged += new System.EventHandler(this.OnShowMessageCheckedChanged);
             // 
             // MessageOptions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this._groupMessage);
             this.Name = "MessageOptions";
             this.Size = new System.Drawing.Size(407, 54);
