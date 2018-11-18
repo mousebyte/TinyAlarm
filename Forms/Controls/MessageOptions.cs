@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using MouseNet.TinyAlarm.Views;
 
 namespace MouseNet.TinyAlarm.Forms.Controls
 {

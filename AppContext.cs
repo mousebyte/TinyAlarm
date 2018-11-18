@@ -23,6 +23,14 @@ namespace MouseNet.TinyAlarm.Forms
                                                 Application.Exit());
             }
 
+        private void OnIconDoubleClick
+            (object sender,
+             EventArgs e)
+            {
+            var form = new NewAlarmForm();
+            
+            }
+
         private void ShowBalloon
             (IMessageConfig config)
             {

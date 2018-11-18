@@ -67,6 +67,8 @@
     <Compile Include="Forms\Controls\AlertOptions.Designer.cs">
       <DependentUpon>AlertOptions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\IMessageOptionsView.cs" />
+    <Compile Include="Views\IView.cs" />
     <Compile Include="Forms\Controls\MessageAnimationOptions.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -134,6 +136,7 @@
     <Compile Include="Forms\Controls\TimerConfig.Designer.cs">
       <DependentUpon>TimerConfig.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\IViewPresenter.cs" />
     <EmbeddedResource Include="Forms\Controls\AlarmConfig.resx">
       <DependentUpon>AlarmConfig.cs</DependentUpon>
     </EmbeddedResource>

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Drawing;
+﻿using System.Drawing;
 using System.Windows.Forms;
 
 namespace MouseNet.TinyAlarm.Forms.Controls
@@ -53,11 +52,6 @@ namespace MouseNet.TinyAlarm.Forms.Controls
         IMessageWindowConfig Window { get; set; }
     }
 
-    public interface IMessageOptionsView
-    {
-        event EventHandler ConfigureClicked;
-    }
-
     [InterfaceCopyable]
     public interface IMessageWindowConfig
     {
@@ -87,39 +81,5 @@ namespace MouseNet.TinyAlarm.Forms.Controls
         AnimationSpeed Speed { get; set; }
         bool FadeIn { get; set; }
     }
-
-    public interface IView<TConfig>
-    {
-        TConfig Config { get; set; }
-    }
-
-    public class Config<TValue>
-        where TValue : class
-    {
-        public TValue Value { get; set; }
-
-        public void CopyTo<TView>
-            (TView view)
-            where TView : IView<TValue>
-            {
-            view.Config = Value;
-            }
-    }
-
-    public interface IViewPresenter<out TView, in TConfig>
-    {
-        TView View { get; }
-
-        void Present
-            (TConfig config);
-    }
-
-    public class ViewPresenter<TView, TConfig>
-        where TConfig : class
-        where TView : IView<TConfig>
-    {
-        public void Configure<T>
-            (T config)
-            where T : Config<TConfig> { }
-    }
+    
 }

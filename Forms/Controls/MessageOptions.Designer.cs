@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this._groupMessage = new System.Windows.Forms.GroupBox();
+            this._cConfigureBtn = new System.Windows.Forms.Button();
             this._cMessageType = new MouseNet.Forms.Controls.RadioButtonGroup();
             this._cShowMessage = new System.Windows.Forms.CheckBox();
-            this._cConfigureBtn = new System.Windows.Forms.Button();
             this._groupMessage.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,16 +42,26 @@
             this._groupMessage.Controls.Add(this._cShowMessage);
             this._groupMessage.Location = new System.Drawing.Point(3, 3);
             this._groupMessage.Name = "_groupMessage";
-            this._groupMessage.Size = new System.Drawing.Size(401, 165);
+            this._groupMessage.Size = new System.Drawing.Size(401, 48);
             this._groupMessage.TabIndex = 1;
             this._groupMessage.TabStop = false;
             this._groupMessage.Text = "Message";
+            // 
+            // _cConfigureBtn
+            // 
+            this._cConfigureBtn.Location = new System.Drawing.Point(317, 16);
+            this._cConfigureBtn.Name = "_cConfigureBtn";
+            this._cConfigureBtn.Size = new System.Drawing.Size(69, 23);
+            this._cConfigureBtn.TabIndex = 4;
+            this._cConfigureBtn.Text = "Configure...";
+            this._cConfigureBtn.UseVisualStyleBackColor = true;
+            this._cConfigureBtn.Click += new System.EventHandler(this.OnConfigureClicked);
             // 
             // _cMessageType
             // 
             this._cMessageType.ButtonLayout = MouseNet.Forms.Controls.RadioButtonLayout.Horizontal;
             this._cMessageType.ButtonMargin = new System.Windows.Forms.Padding(1, 3, 1, 4);
-            this._cMessageType.CheckedItemIndex = -1;
+            this._cMessageType.CheckedItemIndex = 0;
             this._cMessageType.Enabled = false;
             this._cMessageType.Items.AddRange(new object[] {
             "Dialog",
@@ -73,15 +83,6 @@
             this._cShowMessage.Text = "Show message:";
             this._cShowMessage.UseVisualStyleBackColor = true;
             // 
-            // _cConfigureBtn
-            // 
-            this._cConfigureBtn.Location = new System.Drawing.Point(317, 16);
-            this._cConfigureBtn.Name = "_cConfigureBtn";
-            this._cConfigureBtn.Size = new System.Drawing.Size(69, 23);
-            this._cConfigureBtn.TabIndex = 4;
-            this._cConfigureBtn.Text = "Configure...";
-            this._cConfigureBtn.UseVisualStyleBackColor = true;
-            // 
             // MessageOptions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -90,7 +91,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this._groupMessage);
             this.Name = "MessageOptions";
-            this.Size = new System.Drawing.Size(407, 171);
+            this.Size = new System.Drawing.Size(407, 54);
             this._groupMessage.ResumeLayout(false);
             this._groupMessage.PerformLayout();
             this.ResumeLayout(false);
