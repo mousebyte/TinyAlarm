@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MouseNet.TinyAlarm.Forms.Controls;
+using MouseNet.TinyAlarm.Views.Config;
 
 namespace MouseNet.TinyAlarm.Forms
 {
@@ -32,11 +33,11 @@ namespace MouseNet.TinyAlarm.Forms
             }
 
         private void ShowBalloon
-            (IMessageConfig config)
+            (IMessageWindowConfig config)
             {
             _icon.ShowBalloonTip(0,
-                                 config.Window.Appearance.MessageTitle,
-                                 config.Window.Appearance.MessageText,
+                                 config.Appearance.MessageTitle,
+                                 config.Appearance.MessageText,
                                  ToolTipIcon.Warning);
             }
 

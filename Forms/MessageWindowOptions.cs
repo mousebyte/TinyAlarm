@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using MouseNet.TinyAlarm.Forms.Controls;
+using MouseNet.TinyAlarm.Views.Config;
 
 namespace MouseNet.TinyAlarm.Forms
 {

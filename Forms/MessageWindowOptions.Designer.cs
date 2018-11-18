@@ -94,8 +94,8 @@
             this._cAnimationOptions.Location = new System.Drawing.Point(12, 69);
             this._cAnimationOptions.Name = "_cAnimationOptions";
             this._cAnimationOptions.Size = new System.Drawing.Size(260, 81);
-            this._cAnimationOptions.Speed = MouseNet.TinyAlarm.Forms.Controls.AnimationSpeed.Fast;
-            this._cAnimationOptions.Style = MouseNet.TinyAlarm.Forms.Controls.AnimationStyle.SlideUp;
+            this._cAnimationOptions.Speed = MouseNet.TinyAlarm.Views.Config.AnimationSpeed.Fast;
+            this._cAnimationOptions.Style = MouseNet.TinyAlarm.Views.Config.AnimationStyle.SlideUp;
             this._cAnimationOptions.TabIndex = 9;
             // 
             // _cAppearanceOptions

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MouseNet.TinyAlarm.Views.Config;
 
 namespace MouseNet.TinyAlarm.Forms.Controls
 {

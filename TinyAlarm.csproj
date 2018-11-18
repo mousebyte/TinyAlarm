@@ -61,12 +61,10 @@
     <Compile Include="Forms\Controls\AlarmConfig.Designer.cs">
       <DependentUpon>AlarmConfig.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Controls\AlertOptions.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\Controls\AlertOptions.Designer.cs">
-      <DependentUpon>AlertOptions.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Views\Config\IAlertConfig.cs" />
+    <Compile Include="Views\Config\IAnimationConfig.cs" />
+    <Compile Include="Views\Config\IMessageAppearanceConfig.cs" />
+    <Compile Include="Views\Config\IMessageWindowConfig.cs" />
     <Compile Include="Views\IMessageOptionsView.cs" />
     <Compile Include="Views\IView.cs" />
     <Compile Include="Forms\Controls\MessageAnimationOptions.cs">
@@ -103,12 +101,6 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Controls\MessageOptions.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\Controls\MessageOptions.Designer.cs">
-      <DependentUpon>MessageOptions.cs</DependentUpon>
-    </Compile>
     <Compile Include="NativeMethods.cs" />
     <Compile Include="Forms\NewAlarmForm.cs">
       <SubType>Form</SubType>
@@ -140,9 +132,6 @@
     <EmbeddedResource Include="Forms\Controls\AlarmConfig.resx">
       <DependentUpon>AlarmConfig.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Controls\AlertOptions.resx">
-      <DependentUpon>AlertOptions.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Controls\MessageAnimationOptions.resx">
       <DependentUpon>MessageAnimationOptions.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,9 +140,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Controls\MessageOptions.resx">
-      <DependentUpon>MessageOptions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MessageWindowOptions.resx">
       <DependentUpon>MessageWindowOptions.cs</DependentUpon>
