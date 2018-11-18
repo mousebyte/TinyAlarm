@@ -1,21 +1,39 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using MouseNet.TinyAlarm.Forms.Controls;
 
-namespace MouseNet.TinyAlarm.Forms.Controls
+namespace MouseNet.TinyAlarm.Forms
 {
     public partial class MessageWindowOptions
-        : UserControl, IMessageWindowConfig
+        : Form, IMessageWindowConfig
     {
-        public MessageWindowOptions()
+        public MessageWindowOptions
+            (AlertMessageType type)
             {
             InitializeComponent();
+            //TODO: see if I can move conditional logic elsewhere
+            switch (type)
+                {
+                case AlertMessageType.Balloon:
+                    _cSize.Enabled = false;
+                    _cIsSticky.Enabled = false;
+                    _cIsModal.Enabled = false;
+                    _cDuration.Enabled = false;
+                    _lblDuration.Enabled = false;
+                    _cAppearanceOptions.EnableExtendedMode = false;
+                    _cAnimationOptions.Enabled = false;
+                    break;
+                case AlertMessageType.Dialog:
+                    _lblDuration.Enabled = false;
+                    _cDuration.Enabled = false;
+                    _cIsSticky.Enabled = false;
+                    _cAnimationOptions.Enabled = false;
+                    break;
+                case AlertMessageType.Notification:
+                    _cIsModal.Enabled = false;
+                    break;
+                }
             }
 
         public bool IsModal {

@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MouseNet.Forms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MouseNet\Forms\bin\Debug\MouseNet.Forms.dll</HintPath>
+    </Reference>
     <Reference Include="NAudio, Version=1.8.5.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\NAudio.1.8.5\lib\net35\NAudio.dll</HintPath>
     </Reference>
@@ -75,10 +79,10 @@
     <Compile Include="Forms\Controls\MessageAppearanceOptions.Designer.cs">
       <DependentUpon>MessageAppearanceOptions.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Controls\MessageWindowOptions.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Forms\MessageWindowOptions.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Controls\MessageWindowOptions.Designer.cs">
+    <Compile Include="Forms\MessageWindowOptions.Designer.cs">
       <DependentUpon>MessageWindowOptions.cs</DependentUpon>
     </Compile>
     <Compile Include="InterfaceCopyableAttribute.cs" />
@@ -142,14 +146,14 @@
     <EmbeddedResource Include="Forms\Controls\MessageAppearanceOptions.resx">
       <DependentUpon>MessageAppearanceOptions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Controls\MessageWindowOptions.resx">
-      <DependentUpon>MessageWindowOptions.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Controls\MessageOptions.resx">
       <DependentUpon>MessageOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MessageWindowOptions.resx">
+      <DependentUpon>MessageWindowOptions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\NewAlarmForm.resx">
       <DependentUpon>NewAlarmForm.cs</DependentUpon>
